@@ -1,0 +1,28 @@
+.navbar{
+float: left;
+width: 100%;
+border-bottom: 1px solid #ccc;
+}
+.container-logo{
+    width: 60px;
+}
+.container-logo img{
+    width: 100%;
+}
+.container-lista{
+    margin: auto;
+}
+.container-lista ul{
+list-style: none;
+}
+.container-lista li {
+display: inline-block;
+}
+.container-lista li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.container-lista li a:hover{
+    color: black;
+}
