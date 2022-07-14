@@ -1,7 +1,7 @@
 import './NavBar.css';
-import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
@@ -28,6 +28,11 @@ const NavBar = () => {
               <a href='#'>Contacto</a>
             </li>
           </ul>
+        </div>
+        <div>
+          <button variant='text' className='button-cart'>
+            <CartWidget />
+          </button>
         </div>
       </Toolbar>
     </AppBar>

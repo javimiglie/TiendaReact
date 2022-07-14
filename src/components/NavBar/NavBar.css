@@ -26,3 +26,12 @@ display: inline-block;
 .container-lista li a:hover{
     color: black;
 }
+.button-cart{
+    border-style: none;
+    color: white;
+    background-color: transparent;
+}
+
+.button-cart :hover {
+color: black;
+}
