@@ -22,7 +22,9 @@ const ItemCount = () => {
         <p> {count} </p>
         <Button onClick={addCount}> + </Button>
       </div>
-      <button> Comprar </button>
+      <Button variant='contained' color='primary'>
+        Comprar
+      </Button>
     </div>
   );
 };
