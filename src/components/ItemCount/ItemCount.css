@@ -1,0 +1,12 @@
+.count-item {
+display: flex;
+justify-content: center;
+border-top:1px solid #ccc ;
+border-bottom: 1px solid #ccc;
+}
+
+.btn-comprar{
+    display: flex;
+    justify-content: center;
+}
+

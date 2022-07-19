@@ -1,3 +1,4 @@
+import './ItemCount.css';
 import { useState } from 'react';
 import { Button } from '@mui/material';
 
@@ -17,14 +18,16 @@ const ItemCount = () => {
   };
   return (
     <div className='container-comprar'>
-      <div className='button-item'>
+      <div className='count-item'>
         <Button onClick={restCount}> - </Button>
         <p> {count} </p>
         <Button onClick={addCount}> + </Button>
       </div>
-      <Button variant='contained' color='primary'>
-        Comprar
-      </Button>
+      <div className='btn-comprar'>
+        <Button className='btn-comprar' variant='contained' color='primary'>
+          Comprar
+        </Button>
+      </div>
     </div>
   );
 };
