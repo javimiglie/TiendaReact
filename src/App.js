@@ -4,11 +4,14 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste ${cantidad} items al carrito`);
+  };
   return (
     <div>
       <NavBar />
       <ItemListContainer greeting='Bienvenidos' />
-      <ItemCount />
+      <ItemCount stock={5} initial={1} onAdd={onAdd} />
     </div>
   );
 }
