@@ -8,5 +8,6 @@ border-bottom: 1px solid #ccc;
 .btn-comprar{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 

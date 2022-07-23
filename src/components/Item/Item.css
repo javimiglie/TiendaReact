@@ -1,0 +1,25 @@
+
+
+.card-item{
+    max-width: 345px;
+}
+
+
+.img-card{
+    max-height: 345px;
+}
+
+
+.container-btn-detalles{
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.btn-detalles{
+    width: 100%;
+}
+
+
+
+
