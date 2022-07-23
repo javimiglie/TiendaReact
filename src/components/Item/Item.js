@@ -16,7 +16,7 @@ const Item = ({ producto }) => {
         <div>
           <img className='img-card' src={img} />
         </div>
-        <p className='name'>{name}</p>
+        <p>{name}</p>
         <p>{description}</p>
         <span>${price}</span>
         <ItemCount initial={1} stock={stock} onAdd={onAdd} />
