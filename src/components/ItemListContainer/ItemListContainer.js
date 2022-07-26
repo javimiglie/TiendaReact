@@ -4,18 +4,23 @@ import { data } from '../../mock/FakeApi';
 
 const ItemListContainer = (props) => {
   const [listaProductos, setListaProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     data
       .then((res) => setListaProductos(res))
       .catch(() => console.log('hubo un error'))
-      .finally(() => console.log(`finalizó`));
+      .finally(() => setLoading(false));
   }, []);
 
   return (
     <div>
       <p>{props.greeting}</p>
-      <ItemList listaProductos={listaProductos} />
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        <ItemList listaProductos={listaProductos} />
+      )}
     </div>
   );
 };
