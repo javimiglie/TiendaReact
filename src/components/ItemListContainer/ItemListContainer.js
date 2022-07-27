@@ -5,20 +5,20 @@ import { data } from '../../mock/FakeApi';
 const ItemListContainer = (props) => {
   const [listaProductos, setListaProductos] = useState([]);
   const [mensaje, setMensaje] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
     data
       .then((res) => setListaProductos(res))
       .catch(() => setMensaje('hubo un error, intente nuevamente más tarde'))
-      .finally(() => setLoading(false));
+      .finally(() => setCargando(false));
   }, []);
 
   return (
     <div>
       <p>{props.greeting}</p>
       {mensaje && <p>{mensaje}</p>}
-      {loading ? (
+      {cargando ? (
         <p>Cargando...</p>
       ) : (
         <ItemList listaProductos={listaProductos} />
