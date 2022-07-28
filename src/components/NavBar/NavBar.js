@@ -1,4 +1,5 @@
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import CartWidget from '../CartWidget/CartWidget';
@@ -8,7 +9,9 @@ const NavBar = () => {
     <AppBar position='static'>
       <Toolbar>
         <div className='container-logo'>
-          <img src='./logo.png' />
+          <Link to='/'>
+            <img src='./logo.png' />
+          </Link>
         </div>
         <div className='container-titulo'>
           <h1>Tienda Javi</h1>
@@ -16,16 +19,16 @@ const NavBar = () => {
         <div className='container-lista'>
           <ul>
             <li>
-              <a href='#'>Nosotros</a>
+              <Link to='/'> Inicio</Link>
             </li>
             <li>
-              <a href='#'>Hombres</a>
+              <Link to='/productos'> Productos</Link>
             </li>
             <li>
-              <a href='#'>Mujeres</a>
+              <Link to='/preguntasfrecuentes'> Preguntas Frecuentes</Link>
             </li>
             <li>
-              <a href='#'>Contacto</a>
+              <Link to='/contacto'> Contacto</Link>
             </li>
           </ul>
         </div>
