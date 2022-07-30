@@ -15,7 +15,7 @@ const Item = ({ producto }) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className='container-card' sx={{ maxWidth: 345 }}>
       <div className='card-item'>
         <div>
           <img className='img-card' src={img} />

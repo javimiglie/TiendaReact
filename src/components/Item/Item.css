@@ -1,4 +1,6 @@
-
+.container-card{
+    margin: 15px;
+}
 
 .card-item{
     max-width: 345px;
