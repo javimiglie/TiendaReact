@@ -2,8 +2,12 @@ import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 const ItemDetail = ({ producto }) => {
-  const onAdd = () => {
-    console.log(`Agregaste un producto al carrito`);
+  const onAdd = (cantidad) => {
+    if (cantidad > 1) {
+      console.log(`agregaste ${cantidad} productos al carrito`);
+    } else {
+      console.log(`agregaste 1 producto al carrito`);
+    }
   };
   return (
     <div className='info-container'>

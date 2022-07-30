@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom';
 const Item = ({ producto }) => {
   const { img, name, description, price, stock, id } = producto;
   const onAdd = (cantidad) => {
-    console.log(`Agregaste ${cantidad} items en el carrito`);
+    if (cantidad > 1) {
+      console.log(`Agregaste ${cantidad} items en el carrito`);
+    } else {
+      console.log(`Agregaste ${cantidad} item en el carrito`);
+    }
   };
 
   return (
