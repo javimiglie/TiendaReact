@@ -26,7 +26,10 @@ const Item = ({ producto }) => {
         <ItemCount initial={1} stock={stock} onAdd={onAdd} />
         <div className='container-btn-detalles'>
           <Button className='btn-detalles' variant='outlined'>
-            <Link to={`/productos/${id}`}> Ver Detalle </Link>
+            <Link className='link-d' to={`/productos/${id}`}>
+              {' '}
+              Ver Detalle{' '}
+            </Link>
           </Button>
         </div>
       </div>

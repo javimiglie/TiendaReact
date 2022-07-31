@@ -7,6 +7,7 @@ import PreguntasFrecuentes from './pages/PreguntasFrecuentes';
 import Contacto from './pages/Contacto';
 import NotFound from './pages/NotFound';
 import Detalle from './pages/Detalle';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           />
           <Route path='/contacto' element={<Contacto />} />
           <Route path='/productos/:id' element={<Detalle />} />
+          <Route path='/cart' element={<Cart />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
