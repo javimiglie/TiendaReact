@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Tienda Javi - React Js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tienda Javi es una e-commerce diseñada para el proyecto final de CoderHouse en donde utilizo HTML5 y CSS3, Javascript en React js
 
-## Available Scripts
+## Contenidos
 
-In the project directory, you can run:
+1- `Información`
 
-### `npm start`
+2- `Tencologías`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3- `Instalación`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4- `Contacto`
 
-### `npm test`
+### `Información`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Proyecto final del curso de Reacto Js para entregarlo a CoderHouse.
 
-### `npm run build`
+### `Tecnologías`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tecnologías utilizadas en el proyecto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<li>HTML5</li>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<li>CSS3</li>
 
-### `npm run eject`
+<li>JAVASCRIPT</li>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<li>REACT JS</li>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<li>GITHUB</li>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<li>MATERIAL UI</li>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<li>NODEJS</li>
 
-## Learn More
+<li>VISUAL STUDIO CODE</li>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `Instalación`
 
-### Code Splitting
+Instalación para React Js:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+$ npm install g create-react-app my-app
 
-### Analyzing the Bundle Size
+$ cd my-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+$ npm start
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `Contacto`
 
-### Advanced Configuration
+Puedes utilizar los siguientes medios para contactarme:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Mail: javier.miglierini@hotmail.es
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GitHub:https://github.com/javimiglie
