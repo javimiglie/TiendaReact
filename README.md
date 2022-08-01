@@ -106,6 +106,8 @@ $ npm start
 
 Puedes utilizar los siguientes medios para contactarme:
 
+Teléfono:
+
 Mail: javier.miglierini@hotmail.es
 
 GitHub:https://github.com/javimiglie
