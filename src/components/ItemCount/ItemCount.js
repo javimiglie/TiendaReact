@@ -1,17 +1,14 @@
 import './ItemCount.css';
-import { useState } from 'react';
 import { Button } from '@mui/material';
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-  const [count, setCount] = useState(initial);
-
+const ItemCount = ({ stock, count, setCount, onAdd }) => {
   const addCount = () => {
     if (count < stock) {
       setCount(count + 1);
     }
   };
   const restCount = () => {
-    if (count > initial) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };

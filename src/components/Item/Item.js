@@ -1,18 +1,10 @@
 import './Item.css';
 import { Button } from '@mui/material';
 import Card from '@mui/material/Card';
-import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
 const Item = ({ producto }) => {
   const { img, name, description, price, stock, id } = producto;
-  const onAdd = (cantidad) => {
-    if (cantidad > 1) {
-      console.log(`Agregaste ${cantidad} items en el carrito`);
-    } else {
-      console.log(`Agregaste ${cantidad} item en el carrito`);
-    }
-  };
 
   return (
     <Card className='container-card' sx={{ maxWidth: 345 }}>
@@ -23,12 +15,10 @@ const Item = ({ producto }) => {
         <p>{name}</p>
         <p>{description}</p>
         <span>${price}</span>
-        <ItemCount initial={1} stock={stock} onAdd={onAdd} />
         <div className='container-btn-detalles'>
           <Button className='btn-detalles' variant='outlined'>
             <Link className='link-d' to={`/productos/${id}`}>
-              {' '}
-              Ver Detalle{' '}
+              Ver Detalle
             </Link>
           </Button>
         </div>
