@@ -23,8 +23,10 @@ display: inline-block;
     text-decoration: none;
     padding: 10px 20px;
 }
-.container-lista li a:hover{
-    color: black;
+
+.menu-item{
+    text-decoration: none;
+    color: #1769aa
 }
 .button-cart{
     border-style: none;

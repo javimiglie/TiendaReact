@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 const ItemDetail = ({ producto }) => {
+  const [irAlCarrito, setIrAlCarrito] = useState(false);
+
   const onAdd = (cantidad) => {
-    if (cantidad > 1) {
-      console.log(`agregaste ${cantidad} productos al carrito`);
-    } else {
-      console.log(`agregaste 1 producto al carrito`);
-    }
+    setIrAlCarrito(true);
   };
   return (
     <div className='info-container'>
@@ -15,7 +15,15 @@ const ItemDetail = ({ producto }) => {
       <h3>{producto.name}</h3>
       <img src={producto.img} alt={producto.name} width={200} />
       <p>{producto.description}</p>
-      <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
+      {irAlCarrito ? (
+        <Link className='link-carrito' to='/cart'>
+          <Button color='primary' variant='contained'>
+            Ir al Carrito
+          </Button>
+        </Link>
+      ) : (
+        <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
+      )}
     </div>
   );
 };
