@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ producto }) => {
   const [count, setCount] = useState(1);
   const [irAlCarrito, setIrAlCarrito] = useState(false);
+  const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
+
   const onAdd = (cantidad) => {
     if (cantidad > 1) {
       console.log(`agregaste ${cantidad} productos al carrito`);
@@ -15,6 +18,7 @@ const ItemDetail = ({ producto }) => {
       console.log(`agregaste 1 producto al carrito`);
     }
     setIrAlCarrito(true);
+    addToCart(producto, cantidad);
   };
   return (
     <div className='info-container'>

@@ -26,7 +26,7 @@ const ItemCount = ({ stock, count, setCount, onAdd }) => {
           color='primary'
           onClick={() => onAdd(count)}
         >
-          Comprar
+          Agregar al carrito
         </Button>
       </div>
     </div>
