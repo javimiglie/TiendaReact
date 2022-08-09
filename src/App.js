@@ -13,7 +13,7 @@ import { CartProvider } from '../src/context/CartContext';
 function App() {
   return (
     <div className='App'>
-      <CartProvider value={[]}>
+      <CartProvider>
         <BrowserRouter>
           <div>
             <NavBar />
