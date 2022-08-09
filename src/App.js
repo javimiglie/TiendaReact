@@ -13,8 +13,8 @@ import { CartProvider } from '../src/context/CartContext';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
-        <CartProvider value={[]}>
+      <CartProvider value={[]}>
+        <BrowserRouter>
           <div>
             <NavBar />
           </div>
@@ -34,8 +34,8 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
-        </CartProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }

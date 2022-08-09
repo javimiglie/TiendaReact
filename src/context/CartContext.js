@@ -1,44 +1,47 @@
-import { createContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 export const CartContext = createContext({});
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  const addToCart = (item) => {
+    const isInCart = cart.some((producto) => producto.id === item.id);
+
+    if (isInCart) {
+      const updateCart = cart.map((producto) => {
+        if (producto.id === item.id) {
+          return { ...producto, quantity: producto.quantity + item.quantity };
+        }
+      });
+      setCart(updateCart);
+    } else {
+      setCart([...cart, item]);
+    }
+  };
+
   const cleanCart = () => {
     setCart([]);
   };
 
-  const removeToCart = (id) => {
-    setCart(cart.filter((producto) => producto.id !== id));
+  const removeItem = (id) => {
+    setCart(cart.filter((prod) => prod.id !== id));
   };
 
-  const isInCart = (id) => {
-    return cart.some((producto) => producto.id === id) ? true : false;
+  const cantInCart = () => {
+    return cart.reduce((acc, prod) => (acc += prod.quantity), 0);
   };
 
-  const addToCart = (item, cantidad) => {
-    if (isInCart(item.id)) {
-      setCart(
-        cart.map((producto) => {
-          return producto.id === item.id
-            ? { ...producto, cantidad: producto.cantidad + cantidad }
-            : producto;
-        })
-      );
-    } else {
-      setCart([...cart, { ...item, cantidad }]);
-    }
-    console.log(`carrito`, cart);
+  const totalPrice = () => {
+    return cart.reduce((acc, prod) => (acc += prod.price * prod.quantity), 0);
   };
-
   const valueToShare = {
     cart,
-    isInCart,
     cleanCart,
     addToCart,
-    removeToCart,
-    cantInCart: cart.lenght,
+    removeItem,
+    cantInCart,
+    totalPrice,
   };
 
   return (

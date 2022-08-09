@@ -8,24 +8,27 @@ import { CartContext } from '../../context/CartContext';
 const ItemDetail = ({ producto }) => {
   const [count, setCount] = useState(1);
   const [irAlCarrito, setIrAlCarrito] = useState(false);
-  const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
+  const { id, name, description, category, price, img } = producto;
+  const { addToCart } = useContext(CartContext);
 
-  const onAdd = (cantidad) => {
-    if (cantidad > 1) {
-      console.log(`agregaste ${cantidad} productos al carrito`);
-    } else {
-      console.log(`agregaste 1 producto al carrito`);
-    }
+  const onAdd = () => {
+    let itemAComprar = {
+      id,
+      name,
+      price,
+      img,
+      quantity: count,
+    };
     setIrAlCarrito(true);
-    addToCart(producto, cantidad);
+    addToCart(itemAComprar);
   };
   return (
     <div className='info-container'>
       <h2>Información del producto</h2>
-      <h3>{producto.name}</h3>
-      <img src={producto.img} alt={producto.name} width={200} />
-      <p>{producto.description}</p>
+      <h3>{name}</h3>
+      <img src={img} alt={name} width={200} />
+      <p>{description}</p>
       {irAlCarrito ? (
         <div>
           <Button onClick={() => navigate('/productos')}>
