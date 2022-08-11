@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Detalle from './pages/Detalle';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from '../src/context/CartContext';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 function App() {
   return (
