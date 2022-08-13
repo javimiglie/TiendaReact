@@ -22,6 +22,9 @@ const Cart = () => {
         <ItemCart key={productos.id} productos={productos} />
       ))}
       <p> Total: ${totalPrice()}</p>
+      <Button color='primary' variant='contained'>
+        Finalizar compra
+      </Button>
     </div>
   );
 };
