@@ -9,7 +9,6 @@ import { CartContext } from '../../context/CartContext';
 
 const NavBar = () => {
   const { cart } = useContext(CartContext);
-  console.log(cart);
 
   const [anchorEl, setAnchorEl] = useState(null);
 
