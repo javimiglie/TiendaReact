@@ -4,12 +4,11 @@ import NavBar from './components/NavBar/NavBar';
 import Inicio from './pages/Inicio';
 import Produtos from './pages/Productos';
 import PreguntasFrecuentes from './pages/PreguntasFrecuentes';
-import Contacto from './pages/Contacto';
 import NotFound from './pages/NotFound';
 import Detalle from './pages/Detalle';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 import { CartProvider } from '../src/context/CartContext';
-import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 function App() {
   return (
@@ -30,9 +29,9 @@ function App() {
               path='/preguntasfrecuentes'
               element={<PreguntasFrecuentes />}
             />
-            <Route path='/contacto' element={<Contacto />} />
             <Route path='/productos/:id' element={<Detalle />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -1,5 +1,12 @@
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+
 const NotFound = () => {
-  return <h2>Error 404 - Página no encontrada</h2>;
+  return (
+    <div>
+      <h2>Error 404 - Página no encontrada</h2>
+      <ItemListContainer />
+    </div>
+  );
 };
 
 export default NotFound;

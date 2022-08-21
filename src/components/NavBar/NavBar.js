@@ -89,12 +89,6 @@ const NavBar = () => {
                 <Link to='/preguntasfrecuentes'>PREGUNTAS FRECUENTES</Link>
               </Button>
             </li>
-
-            <li>
-              <Button>
-                <Link to='/contacto'>CONTACTO</Link>
-              </Button>
-            </li>
           </ul>
         </div>
 

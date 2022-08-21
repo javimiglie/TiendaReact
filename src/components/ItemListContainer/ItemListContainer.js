@@ -11,8 +11,6 @@ import {
   where,
 } from 'firebase/firestore';
 
-// import de mi FakeApi
-// import { data } from '../../mock/FakeApi';
 const ItemListContainer = (props) => {
   const [listaProductos, setListaProductos] = useState([]);
   const [mensaje, setMensaje] = useState(false);
@@ -46,38 +44,6 @@ const ItemListContainer = (props) => {
     }
   }, [category]);
 
-  /// useEffect sin filtro de category
-  /*
-  useEffect(() => {
-    const db = getFirestore();
-
-    const productosCollection = collection(db, `productos`);
-    getDocs(productosCollection)
-      .then((snapshot) => {
-        const data = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setListaProductos(data);
-      })
-      .catch(() => setMensaje('hubo un error, intente nuevamente más tarde'))
-      .finally(() => setCargando(false));
-  }, []);
-*/
-  /// useEffect para el Mock
-  /*useEffect(() => {
-    data
-      .then((res) => {
-        if (!category) {
-          setListaProductos(res);
-        } else {
-          setListaProductos(res.filter((item) => item.category == category));
-        }
-      })
-      .catch(() => setMensaje('hubo un error, intente nuevamente más tarde'))
-      .finally(() => setCargando(false));
-  }, [category]);
-*/
   return (
     <div className='container-gral'>
       <p>{props.greeting}</p>
