@@ -1,5 +1,6 @@
 import './ItemCount.css';
 import { Button } from '@mui/material';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const ItemCount = ({ stock, count, setCount, onAdd }) => {
   const addCount = () => {
@@ -22,8 +23,10 @@ const ItemCount = ({ stock, count, setCount, onAdd }) => {
       <div className='btn-comprar'>
         <Button
           className='btn-comprar'
+          startIcon={<AddShoppingCartIcon />}
+          size='large'
           variant='contained'
-          color='primary'
+          color='success'
           onClick={() => onAdd(count)}
         >
           Agregar al carrito

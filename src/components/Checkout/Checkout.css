@@ -1,0 +1,28 @@
+form {
+    width: 400px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(172, 180, 255);
+}
+form label {
+    width: 150px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"] {
+   
+    padding: 5px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: inline-block;
+}
+.btn-fin {
+    padding: 8px 16px;
+    margin-top: 32px;
+}

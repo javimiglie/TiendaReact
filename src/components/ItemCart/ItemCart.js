@@ -2,21 +2,42 @@ import React from 'react';
 import './ItemCart.css';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-import { Button } from '@mui/material';
+import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 
 const ItemCart = ({ productos }) => {
   const { removeItem } = useContext(CartContext);
+
   return (
-    <div>
-      <img className='img-cart' src={productos.img} alt={productos.name} />
-      <div className='itemCart'>
-        <p>Título: {productos.name}</p>
-        <p>Cantidad: {productos.quantity}</p>
-        <p>Precio: ${productos.price}</p>
-        <p>Subtotal: ${productos.quantity * productos.price}</p>
-        <Button onClick={() => removeItem(productos.id)}> Eliminar </Button>
+    <>
+      <div className='container-cart'>
+        <div className='container-img'>
+          <img className='img-cart' src={productos.img} alt={productos.name} />
+        </div>
+        <div>
+          <h3>Producto</h3>
+          <p>{productos.name}</p>
+        </div>
+        <div>
+          <h3>Cantidad</h3>
+          <p>{productos.quantity}</p>
+        </div>
+        <div>
+          <h3>Precio</h3>
+          <p>${productos.price}</p>
+        </div>
+        <div>
+          <h3>Subtotal</h3>
+          <p>${productos.quantity * productos.price}</p>
+        </div>
+        <div>
+          <DeleteForeverRoundedIcon
+            sx={{ fontSize: 45 }}
+            className='delete-icon'
+            onClick={() => removeItem(productos.id)}
+          ></DeleteForeverRoundedIcon>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

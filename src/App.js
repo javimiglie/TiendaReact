@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Detalle from './pages/Detalle';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 import { CartProvider } from '../src/context/CartContext';
 
 function App() {
@@ -15,9 +16,7 @@ function App() {
     <div className='App'>
       <CartProvider>
         <BrowserRouter>
-          <div>
-            <NavBar />
-          </div>
+          <NavBar />
           <Routes>
             <Route path='/' element={<Inicio />} />
             <Route path='/productos' element={<Produtos />} />
@@ -34,6 +33,7 @@ function App() {
             <Route path='/checkout' element={<Checkout />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </div>

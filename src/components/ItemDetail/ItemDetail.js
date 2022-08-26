@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { CartContext } from '../../context/CartContext';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const ItemDetail = ({ producto }) => {
   const [count, setCount] = useState(1);
@@ -31,11 +33,17 @@ const ItemDetail = ({ producto }) => {
       <p>{description}</p>
       {irAlCarrito ? (
         <div>
-          <Button onClick={() => navigate('/productos')}>
+          <Button
+            startIcon={<AddShoppingCartIcon />}
+            size='large'
+            onClick={() => navigate('/productos')}
+          >
             Seguir comprando
           </Button>
           <Button
             color='primary'
+            startIcon={<ShoppingCartCheckoutIcon />}
+            size='large'
             variant='contained'
             onClick={() => navigate('/cart')}
           >

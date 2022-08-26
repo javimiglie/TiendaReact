@@ -1,9 +1,12 @@
-import './Cart.css';
 import ItemCart from '../ItemCart/ItemCart';
 import { Button } from '@mui/material';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import AddCardIcon from '@mui/icons-material/AddCard';
+import Stack from '@mui/material/Stack';
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -12,9 +15,22 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <>
-        <p>El carrito está vacio</p>
-
-        <Button onClick={() => navigate('/productos')}>Ir a comprar</Button>
+        <h2>Upss... Tu carrito está vacío</h2>
+        <img
+          src='https://media.giphy.com/media/giXLnhxp60zEEIkq8K/giphy-downsized-large.gif'
+          width={300}
+        ></img>
+        <div>
+          <Button
+            variant='contained'
+            color='info'
+            startIcon={<ShoppingCartCheckoutIcon />}
+            size='large'
+            onClick={() => navigate('/productos')}
+          >
+            Ir a comprar
+          </Button>
+        </div>
       </>
     );
   }
@@ -23,17 +39,29 @@ const Cart = () => {
       {cart.map((productos) => (
         <ItemCart key={productos.id} productos={productos} />
       ))}
-      <p> Total: ${totalPrice()}</p>
-      <Button color='primary' variant='contained' onClick={cleanCart}>
-        Borrar Carrito
-      </Button>
-      <Button
-        color='primary'
-        variant='contained'
-        onClick={() => navigate('/checkout')}
-      >
-        Completar compra
-      </Button>
+      <h2> Total: ${totalPrice()}</h2>
+      <Stack spacing={2} direction='row' justifyContent='center'>
+        <Button
+          className='button-delete'
+          startIcon={<RemoveShoppingCartIcon />}
+          size='large'
+          color='error'
+          variant='contained'
+          onClick={cleanCart}
+        >
+          Borrar Carrito
+        </Button>
+        <Button
+          className='btn-cart'
+          startIcon={<AddCardIcon />}
+          size='large'
+          color='success'
+          variant='contained'
+          onClick={() => navigate('/checkout')}
+        >
+          Completar compra
+        </Button>
+      </Stack>
     </div>
   );
 };

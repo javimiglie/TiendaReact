@@ -2,6 +2,7 @@ import './Item.css';
 import { Button } from '@mui/material';
 import Card from '@mui/material/Card';
 import { Link } from 'react-router-dom';
+import CheckroomIcon from '@mui/icons-material/Checkroom';
 
 const Item = ({ producto }) => {
   const { img, name, description, price, stock, id } = producto;
@@ -12,11 +13,16 @@ const Item = ({ producto }) => {
         <div>
           <img className='img-card' src={img} />
         </div>
-        <p>{name}</p>
+        <h3>{name}</h3>
         <p>{description}</p>
-        <span>${price}</span>
+        <p>${price}</p>
         <div className='container-btn-detalles'>
-          <Button className='btn-detalles' variant='outlined'>
+          <Button
+            className='btn-detalles'
+            variant='contained'
+            startIcon={<CheckroomIcon />}
+            size='large'
+          >
             <Link className='link-d' to={`/productos/${id}`}>
               Ver Detalle
             </Link>

@@ -4,12 +4,9 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import CartWidget from '../CartWidget/CartWidget';
 import { Button, Menu, MenuItem } from '@mui/material';
-import { useContext, useState } from 'react';
-import { CartContext } from '../../context/CartContext';
+import { useState } from 'react';
 
 const NavBar = () => {
-  const { cart } = useContext(CartContext);
-
   const [anchorEl, setAnchorEl] = useState(null);
 
   const open = Boolean(anchorEl);
