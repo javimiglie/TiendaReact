@@ -1,9 +1,10 @@
-const Inicio = () => {
+import Inicio from '../components/Inicio/Inicio';
+const Home = () => {
   return (
     <div>
-      <h2>¿Quiénes somos?</h2>
+      <Inicio />
     </div>
   );
 };
 
-export default Inicio;
+export default Home;

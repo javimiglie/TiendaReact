@@ -1,0 +1,10 @@
+.container-home{
+    width: 100%;
+}
+.card-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+

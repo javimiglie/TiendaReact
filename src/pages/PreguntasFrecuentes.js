@@ -1,4 +1,6 @@
-const PreguntasFrecuentes = () => {
-  return <h2>Preguntas Frecuentes</h2>;
+import PreguntasFrecuentes from '../components/PreguntasFrecuentes/PreguntasFrecuentes';
+
+const PregFrecuentes = () => {
+  return <PreguntasFrecuentes />;
 };
-export default PreguntasFrecuentes;
+export default PregFrecuentes;

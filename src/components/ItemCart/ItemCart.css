@@ -5,7 +5,8 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
-    border: solid 1px gray
+    background-color: rgb(172, 180, 255);
+    border-radius: 10px;
 }
 .container-img{
     width: 100px;

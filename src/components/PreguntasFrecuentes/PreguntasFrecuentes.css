@@ -1,0 +1,17 @@
+.container-preg{
+    width: 70%;
+    margin:auto
+}
+h2{
+    margin-bottom: 50px;
+}
+.subtitle-preg, .text-preg, .list-preg {
+    text-align: left ;
+}
+
+
+li {
+    padding: 5px;
+}
+
+
