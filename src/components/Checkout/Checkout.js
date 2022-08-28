@@ -48,12 +48,13 @@ const Checkout = () => {
     <>
       {!orderId ? (
         <div>
-          <h2>Checkout</h2>
+          <h2>Generar número de orden</h2>
           <form onSubmit={finalizarCompra}>
             <div>
               <label>Nombre y Apellido</label>
               <input
                 type='text'
+                autoFocus
                 required
                 placeholder='Javier Miglierini'
                 name='name'
