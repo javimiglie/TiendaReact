@@ -2,6 +2,7 @@ import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import {
   collection,
@@ -49,7 +50,7 @@ const ItemListContainer = (props) => {
       <p>{props.greeting}</p>
       {mensaje && <p>{mensaje}</p>}
       {cargando ? (
-        <p>Cargando...</p>
+        <CircularProgress />
       ) : (
         <ItemList listaProductos={listaProductos} />
       )}
