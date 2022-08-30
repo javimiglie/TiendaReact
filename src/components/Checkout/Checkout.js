@@ -139,7 +139,7 @@ const Checkout = () => {
             startIcon={<HomeIcon />}
             onClick={() => navigate('/productos')}
           >
-            Volver a inicio
+            Volver al inicio
           </Button>
         </div>
       )}

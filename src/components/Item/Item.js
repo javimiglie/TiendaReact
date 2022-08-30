@@ -1,10 +1,11 @@
 import './Item.css';
 import { Button } from '@mui/material';
 import Card from '@mui/material/Card';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 
 const Item = ({ producto }) => {
+  const navigate = useNavigate();
   const { img, name, description, price, stock, id } = producto;
 
   return (
@@ -22,10 +23,9 @@ const Item = ({ producto }) => {
             variant='contained'
             startIcon={<CheckroomIcon />}
             size='large'
+            onClick={() => navigate(`/productos/${id}`)}
           >
-            <Link className='link-d' to={`/productos/${id}`}>
-              Ver Detalle
-            </Link>
+            Ver Detalle
           </Button>
         </div>
       </div>
