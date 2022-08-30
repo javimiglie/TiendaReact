@@ -128,6 +128,7 @@ const Checkout = () => {
           <h2>Su compra ha sido exitosa</h2>
           <img
             src='https://media.giphy.com/media/GtAuwgj50hqlnjibmy/giphy.gif'
+            alt='Compra exitosa'
             width={300}
           ></img>
           <h3>El número de orden es:</h3>

@@ -18,6 +18,7 @@ const Cart = () => {
         <h2>Upss... Tu carrito está vacío</h2>
         <img
           src='https://media.giphy.com/media/giXLnhxp60zEEIkq8K/giphy-downsized-large.gif'
+          alt='Carrito Vacío'
           width={300}
         ></img>
         <div>
