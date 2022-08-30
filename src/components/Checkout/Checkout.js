@@ -16,13 +16,20 @@ const Checkout = () => {
   const [comprador, setComprador] = useState({});
   const { cart, totalPrice, cleanCart } = useContext(CartContext);
   const navigate = useNavigate();
-  const [orderId, setOrderId] = useState(``);
+  const [orderId, setOrderId] = useState('');
+  const [repeatMail, setRepeatMail] = useState('');
 
   const datosComprador = (e) => {
     setComprador({
       ...comprador,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const validateEmail = (event) => {
+    if (event.target.value === comprador.email) {
+      setRepeatMail(true);
+    } else setRepeatMail(false);
   };
 
   const finalizarCompra = (e) => {
@@ -87,9 +94,15 @@ const Checkout = () => {
                 type='email'
                 required
                 placeholder='ejemplo@hotmail.com'
-                name='repeat-email'
-                onChange={datosComprador}
+                onChange={validateEmail}
               ></input>
+              {!repeatMail ? (
+                <div className='mail-danger'>
+                  Los emails ingresados deben coincidir
+                </div>
+              ) : (
+                <div className='mail-success'>Los emails coinciden</div>
+              )}
             </div>
             <div>
               <Button
@@ -98,6 +111,12 @@ const Checkout = () => {
                 variant='contained'
                 startIcon={<CreditScoreIcon />}
                 size='large'
+                disabled={
+                  !comprador.email ||
+                  !comprador.name ||
+                  !comprador.phone ||
+                  !repeatMail
+                }
               >
                 Finalizar compra
               </Button>
