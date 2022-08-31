@@ -1,10 +1,10 @@
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import CartWidget from '../CartWidget/CartWidget';
 import { Button, Menu, MenuItem } from '@mui/material';
-import { useState } from 'react';
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);

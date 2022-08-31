@@ -2,7 +2,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {

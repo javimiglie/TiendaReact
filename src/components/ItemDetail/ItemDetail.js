@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import ItemCount from '../ItemCount/ItemCount';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import { Button } from '@mui/material';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
@@ -11,7 +11,7 @@ const ItemDetail = ({ producto }) => {
   const [count, setCount] = useState(1);
   const [irAlCarrito, setIrAlCarrito] = useState(false);
   const navigate = useNavigate();
-  const { id, name, description, category, price, img } = producto;
+  const { id, name, description, price, img } = producto;
   const { addToCart } = useContext(CartContext);
 
   const onAdd = () => {

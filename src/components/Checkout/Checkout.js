@@ -3,14 +3,14 @@ import './Checkout.css';
 import { Button } from '@mui/material';
 import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import HomeIcon from '@mui/icons-material/Home';
 import {
   addDoc,
   collection,
   serverTimestamp,
   getFirestore,
 } from 'firebase/firestore';
-import CreditScoreIcon from '@mui/icons-material/CreditScore';
-import HomeIcon from '@mui/icons-material/Home';
 
 const Checkout = () => {
   const [comprador, setComprador] = useState({});
