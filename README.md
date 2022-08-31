@@ -43,7 +43,6 @@ Tecnologías utilizadas en el proyecto:
 
 <li>FIREBASE</li>
 
-<li>VERCEL</li>
 
 ### `Instalación`
 
