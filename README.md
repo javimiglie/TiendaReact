@@ -2,6 +2,11 @@
 
 Tienda Javi es una e-commerce diseñada para el proyecto final de CoderHouse en donde utilizo HTML5 y CSS3, Javascript en React js
 
+## Visualización
+
+
+![](/public/Demostración.gif "Simulación de una compra")
+
 ## Contenidos
 
 1- `Información`
@@ -35,6 +40,10 @@ Tecnologías utilizadas en el proyecto:
 <li>NODEJS</li>
 
 <li>VISUAL STUDIO CODE</li>
+
+<li>FIREBASE</li>
+
+<li>VERCEL</li>
 
 ### `Instalación`
 
