@@ -34,7 +34,7 @@ const NavBar = () => {
       <Toolbar>
         <div className='container-logo'>
           <Link to='/'>
-            <img src='./logo.png' />
+            <img src='./logo.png' alt='logo' />
           </Link>
         </div>
 

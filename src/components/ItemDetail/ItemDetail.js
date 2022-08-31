@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import './ItemDetail.css';
-import ItemCount from '../ItemCount/ItemCount';
-import { useNavigate } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext';
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
+import './ItemDetail.css';
+import { CartContext } from '../../context/CartContext';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
