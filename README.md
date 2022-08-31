@@ -4,6 +4,10 @@ Tienda Javi es una e-commerce diseñada para el proyecto final de CoderHouse en 
 
 ## Visualización
 
+Este proyecto ha sido desplegado mediante Vercel y a continuación dejo el link para visualizarlo
+
+https://tienda-react-blush.vercel.app/
+
 
 ![](/public/Demostración.gif "Simulación de una compra")
 
@@ -11,7 +15,7 @@ Tienda Javi es una e-commerce diseñada para el proyecto final de CoderHouse en 
 
 1- `Información`
 
-2- `Tencologías`
+2- `Tecnologías`
 
 3- `Instalación`
 
@@ -45,6 +49,7 @@ Tecnologías utilizadas en el proyecto:
 
 <li>VERCEL</li>
 
+
 ### `Instalación`
 
 Instalación para React Js:
@@ -61,4 +66,6 @@ Puedes utilizar los siguientes medios para contactarme:
 
 Mail: javier.miglierini@hotmail.es
 
-GitHub:https://github.com/javimiglie
+GitHub: https://github.com/javimiglie
+
+
